@@ -1,6 +1,6 @@
-# mparker17/mush
+# mparker17/docker-mush
 
-mparker17's Drush
+mparker17's Drush — Drush with mparker17's preferred extensions.
 
 # Why?
 
