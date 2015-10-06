@@ -7,3 +7,4 @@ mparker17's Drush — Drush with mparker17's preferred extensions.
 I want certain Drush commands to work...
 
 * `drush sqlc`
+* `drush rr`
