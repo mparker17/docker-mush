@@ -17,3 +17,6 @@ RUN drush --version
 
 # Update the entry point of the application
 ENTRYPOINT ["drush"]
+
+# The official Drupal repository puts the Drupalroot at /var/www/html.
+WORKDIR /var/www/html
