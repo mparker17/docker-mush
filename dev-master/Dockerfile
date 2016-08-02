@@ -12,6 +12,9 @@ RUN composer global require drush/drush:"dev-master" --prefer-dist
 # Setup the symlink
 RUN ln -sf $COMPOSER_HOME/vendor/bin/drush.php /usr/local/bin/drush
 
+# Add the Registry Rebuild module.
+RUN drush @none dl registry_rebuild
+
 # Display which version of Drush was installed
 RUN drush --version
 
