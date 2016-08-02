@@ -12,8 +12,8 @@ RUN composer global require drush/drush:"~8.1.0" --prefer-dist
 # Setup the symlink
 RUN ln -sf $COMPOSER_HOME/vendor/bin/drush.php /usr/local/bin/drush
 
-# Add the Registry Rebuild and site_audit modules.
-RUN drush @none dl registry_rebuild site_audit
+# Add the site_audit module.
+RUN drush @none dl site_audit
 
 # Display which version of Drush was installed
 RUN drush --version
