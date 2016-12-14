@@ -1,6 +1,6 @@
 # Drush Docker Container
 FROM composer/composer
-MAINTAINER Rob Loach <robloach@gmail.com>
+MAINTAINER M Parker <mparker17@536298.no-reply.drupal.org>
 
 # Add common extensions
 RUN apt-get update \
