@@ -3,7 +3,9 @@ FROM composer/composer
 MAINTAINER Rob Loach <robloach@gmail.com>
 
 # Add common extensions
-RUN apt-get update && apt-get install -y mysql-client
+RUN apt-get update \
+    && apt-get install -y mysql-client \
+    && rm -rf /var/lib/apt/lists/*
 RUN docker-php-ext-install pdo_mysql
 
 # Drush 6 needs the Console_Table pear.
