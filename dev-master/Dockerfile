@@ -14,7 +14,7 @@ RUN composer global require drush/drush:"dev-master" --prefer-dist
 RUN ln -sf $COMPOSER_HOME/vendor/bin/drush.php /usr/local/bin/drush
 
 # Add the Registry Rebuild and site_audit modules.
-RUN drush @none dl registry_rebuild site_audit
+RUN drush @none dl registry_rebuild-7.x site_audit
 
 # Display which version of Drush was installed
 RUN drush --version
