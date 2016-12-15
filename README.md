@@ -22,7 +22,7 @@ Or build `mparker17/mush` from source:
 
 ```
 git clone https://github.com/mparker17/docker-mush.git
-cd drush-docker
+cd docker-mush
 cd dev-master
 docker build -t mparker17/mush:dev-master .
 ```
