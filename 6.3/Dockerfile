@@ -1,12 +1,11 @@
 # Drush Docker Container
-FROM composer/composer
+FROM composer:1
 MAINTAINER M Parker <mparker17@536298.no-reply.drupal.org>
 
-# Add common extensions
-RUN apt-get update \
-    && apt-get install -y mysql-client \
-    && rm -rf /var/lib/apt/lists/*
-RUN docker-php-ext-install pdo_mysql
+# Add minimal dependencies.
+RUN apk --no-cache add mysql-client \
+    && docker-php-ext-install pdo_mysql \
+    && rm -rf /var/cache/apk/*
 
 # Drush 6 needs the Console_Table pear.
 RUN pear install Console_Table
